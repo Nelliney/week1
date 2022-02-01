@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  padding: 0;
+  background-color:#DDC599;
+  font-family: 'Lato', sans-serif;
+}
+
+header, footer {
+  background: #0D1217;
+  color: blanchedalmond;
+  padding: 2rem;
+}
+
+footer {
+    background: #343940;
+}
+
+ol {
+  list-style: none;
+   padding: 0;
+}
+
+.intro {
+  padding: 2rem;
+  column-count: 3;
+}
+
+aside {
+background-color: #EADDBD;
+  padding: 1rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: #0D1217;
+  padding: 1rem 2rem;
+  color: blanchedalmond;
+}
+
+.labs {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: #0D1217;
+  padding: 1rem 2rem;
+  color: blanchedalmond;
+}
+
+.labs h2{
+  padding-right: 0.3rem;
+}
+
+.projects ol {
+  height:90%;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start; /* only use for wrapped rows. Otherwise use align-items */
+}
+
+.labs ol {
+  display: grid;
+  grid-template-columns: repeat( 2, 1fr );
+  grid-gap: 2rem;
+}
+
+.projects li, .labs li {
+  background-image: url("../images/1.jpg");
+  background-size: cover;
+  padding: 10px;
+  height:10rem;
+}
+
+.projects li {
+  /* flex-grow | flex-shrink | flex-basis */
+  flex: 1 1 5rem;
+}
+
+a {
+  color: black;
+}
+
+@media screen and (min-width: 600px) {
+  
+  body {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+  
+  header, footer {
+    grid-column: 1 / 4;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+ }
+  
+  .intro {
+    grid-column: 1/3;
+  }
+  .projects {
+    grid-template-columns: repeat( 2, 1fr );
+  }
+
+  .projects, .labs{
+    background-color: #FFFFEF;
+    color: black;
+  }
+  
+}
+
